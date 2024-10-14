@@ -73,4 +73,10 @@ Sélectionnez Run Collection.
 Cliquez sur Run all requests pour exécuter tous les tests de la collection.
 Si tout est correctement configuré, les tests devraient s'exécuter sans problème.
 
+## Documentation API avec Swagger
+
+Pour accéder à la documentation de l'API via Swagger, lancez votre navigateur et entrez l'URL suivante :
+
+http://localhost:3000/api-docs/](http://localhost:3000/api-docs/
+
 
