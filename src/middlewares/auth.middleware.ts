@@ -14,7 +14,7 @@ export const verifyToken = (req: Request, res: Response, next: NextFunction) => 
 
     jwt.verify(token, JWT_SECRET, (err, decoded) => {
       if (err){
-        logger.warn('Token invalide : ${err.message}');
+        logger.warn('Token invalide');
         res.status(401).json({ message: 'Token invalide.' }); 
         return;
       }
