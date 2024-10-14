@@ -33,4 +33,39 @@ Pour lancer l'application, suivez ces étapes :
 
    ```bash
    npm start
+   ```
+## Tests automatisés
+
+Les tests automatisés sont situés dans le dossier tests_collections, contenant les collections Postman.
+
+Étapes pour exécuter les tests :
+Démarrer le projet : Assurez-vous que le projet est en cours d'exécution en utilisant la commande :
+
+```bash
+npm start
+```
+### Configurer l'Authorization dans Postman :
+
+Ouvrez la collection dans Postman.
+Allez dans l'onglet Authorization de la collection.
+Sélectionnez Bearer Token comme type d'autorisation.
+Dans le champ Token, insérez le token d'authentification.
+
+### Obtenir le Token :
+
+Pour obtenir un token, exécutez la requête POST Test User Login (manager) ou POST Test User Login (employee) dans Postman.
+
+### Tester chaque requête manuellement :
+
+Pour tester manuellement une requête, allez dans l'onglet Headers.
+Ajoutez une clé Authorization et mettez comme value : <votre_token_reçu>
+
+### Exécuter tous les tests :
+
+Cliquez sur les trois points (...) à côté de la collection dans Postman.
+Sélectionnez Run Collection.
+
+Cliquez sur Run all requests pour exécuter tous les tests de la collection.
+Si tout est correctement configuré, les tests devraient s'exécuter sans problème.
+
 
