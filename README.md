@@ -77,6 +77,6 @@ Si tout est correctement configuré, les tests devraient s'exécuter sans probl�
 
 Pour accéder à la documentation de l'API via Swagger, lancez votre navigateur et entrez l'URL suivante :
 
-http://localhost:3000/api-docs/](http://localhost:3000/api-docs/
+http://localhost:3000/api-docs/
 
 
