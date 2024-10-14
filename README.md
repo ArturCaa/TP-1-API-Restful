@@ -48,8 +48,10 @@ npm start
 
 Ouvrez la collection dans Postman.
 Allez dans l'onglet Authorization de la collection.
-Sélectionnez Bearer Token comme type d'autorisation.
+Sélectionnez OAuth 2.0 comme type d'autorisation.
 Dans le champ Token, insérez le token d'authentification.
+Enlever Bearer dans Header Prefix.
+Sauvegarder les changements.
 
 ### Obtenir le Token :
 
