@@ -29,8 +29,11 @@ Pour lancer l'application, suivez ces étapes :
 
 1. Accédez au dossier du projet.
 2. Ouvrez votre terminal.
-3. Exécutez la commande suivante :
-
+3. Installer npm_modules avec la commande :
+   ```bash
+   npm install
+   ```
+4. Pour lancer exécutez la commande suivante :
    ```bash
    npm start
    ```
