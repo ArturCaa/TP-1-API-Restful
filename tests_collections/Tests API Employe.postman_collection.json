@@ -1,0 +1,405 @@
+{
+	"info": {
+		"_postman_id": "e4687db0-351f-48ff-a85b-f0b14a996864",
+		"name": "Tests API Employe",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32921699"
+	},
+	"item": [
+		{
+			"name": "Test User Login (employe)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImVtcGxveWVlIiwiaWF0IjoxNzI4OTI3OTA1LCJleHAiOjE3Mjg5MzE1MDV9.-K7bhTnyVOztdQsAFbqKq6EsxWEjm68VWT_3ftBex8Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"artur@example.com\",\n    \"password\": \"123\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/users/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test getProducts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImVtcGxveWVlIiwiaWF0IjoxNzI4OTI3OTA1LCJleHAiOjE3Mjg5MzE1MDV9.-K7bhTnyVOztdQsAFbqKq6EsxWEjm68VWT_3ftBex8Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"artur@example.com\",\n    \"password\": \"123\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test getProducts maxPrice = 10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImVtcGxveWVlIiwiaWF0IjoxNzI4OTI3OTA1LCJleHAiOjE3Mjg5MzE1MDV9.-K7bhTnyVOztdQsAFbqKq6EsxWEjm68VWT_3ftBex8Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"artur@example.com\",\n    \"password\": \"123\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/products?maxPrice=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "maxPrice",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test getProducts minPrice = 100",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImVtcGxveWVlIiwiaWF0IjoxNzI4OTI3OTA1LCJleHAiOjE3Mjg5MzE1MDV9.-K7bhTnyVOztdQsAFbqKq6EsxWEjm68VWT_3ftBex8Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"artur@example.com\",\n    \"password\": \"123\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/products?minPrice=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "minPrice",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Ajout Nouveau Product (Acces interdit)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImVtcGxveWVlIiwiaWF0IjoxNzI4OTI3OTA1LCJleHAiOjE3Mjg5MzE1MDV9.-K7bhTnyVOztdQsAFbqKq6EsxWEjm68VWT_3ftBex8Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Smartphone\",\n  \"description\": \"Un smartphone de dernière génération avec écran OLED.\",\n  \"price\": 699.99,\n  \"quantity\": 25,\n  \"category\": \"Electronics\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Put Product (Acces interdit)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImVtcGxveWVlIiwiaWF0IjoxNzI4OTI3OTA1LCJleHAiOjE3Mjg5MzE1MDV9.-K7bhTnyVOztdQsAFbqKq6EsxWEjm68VWT_3ftBex8Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Artur\",\n  \"description\": \"Personne\",\n  \"price\": 1313,\n  \"quantity\": 311,\n  \"category\": \"Electronics\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/products/22",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products",
+						"22"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test Delete Product (Acces interdit)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImVtcGxveWVlIiwiaWF0IjoxNzI4OTI3OTA1LCJleHAiOjE3Mjg5MzE1MDV9.-K7bhTnyVOztdQsAFbqKq6EsxWEjm68VWT_3ftBex8Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Artur\",\n  \"description\": \"Personne\",\n  \"price\": 1313,\n  \"quantity\": 311,\n  \"category\": \"Electronics\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/products/15",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products",
+						"15"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test getUsers",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImVtcGxveWVlIiwiaWF0IjoxNzI4OTI3OTA1LCJleHAiOjE3Mjg5MzE1MDV9.-K7bhTnyVOztdQsAFbqKq6EsxWEjm68VWT_3ftBex8Y",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Artur\",\n  \"description\": \"Personne\",\n  \"price\": 1313,\n  \"quantity\": 311,\n  \"category\": \"Electronics\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test getProducts minQuantity = 10",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6Im1hbmFnZXIiLCJpYXQiOjE3Mjg5MjY2NzcsImV4cCI6MTcyODkzMDI3N30.GtTElgDlQBfdzp_4doEOSl1RAY30Z3QhR9Rjv8orILc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"john.doe@example.com\",\n    \"password\": \"123\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/products?minQuantity=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "minQuantity",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Test getProducts maxQuantity = 100",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6Im1hbmFnZXIiLCJpYXQiOjE3Mjg5MjY2NzcsImV4cCI6MTcyODkzMDI3N30.GtTElgDlQBfdzp_4doEOSl1RAY30Z3QhR9Rjv8orILc",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"john.doe@example.com\",\n    \"password\": \"123\"\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/v1/products?maxQuantity=100",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"v1",
+						"products"
+					],
+					"query": [
+						{
+							"key": "maxQuantity",
+							"value": "100"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
