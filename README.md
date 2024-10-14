@@ -14,7 +14,8 @@ sessionSecret: process.env.SESSION_SECRET || 'secret_par_defaut_pour_les_session
 jwtSecret: process.env.JWT_SECRET || 'secret_par_defaut_pour_le_jwt',
 databaseUrl: process.env.DATABASE_URL || 'mongodb://localhost:27017/defaultdb',
 nodeEnv: process.env.NODE_ENV || 'development',
-isProduction: process.env.NODE_ENV === 'production',
+isProduction: process.env.NODE_ENV === 'production'
+```
 
 ## Clé secrète JWT
 La clé secrète JWT utilisée pour l'authentification se trouve dans le fichier `jwt.util.ts`, situé dans le dossier `utils`, /src/utils/jwt.util.ts.
